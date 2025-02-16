@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Meme View</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="refresh" content="30;url=http://127.0.0.1:5001/"/>
+        <style>
+            body {
+                background-color: #000000;
+                margin: 0;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                min-height: 100vh;
+                box-sizing: border-box;
+            }
+            
+            .container {
+                max-width: 1200px;
+                width: 100%;
+                padding: 0 15px;
+                margin: 0 auto;
+            }
+            
+            h1 {
+                text-align: center;
+                font-family: 'Arial', sans-serif;
+                color: #ffffff;
+                font-size: clamp(1.5em, 5vw, 3em);
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                margin-bottom: 30px;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            }
+
+            h2 {
+                color: #ffffff;
+                font-family: 'Georgia', serif;
+                font-size: 1.5em;
+                margin-top: 20px;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 10px;
+                box-shadow: 0 0 20px rgba(255,255,255,0.2);
+                transition: transform 0.3s ease;
+            }
+
+            p {
+                color: #ffffff;
+                font-family: 'Arial', sans-serif;
+                font-size: clamp(1em, 3vw, 1.2em);
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            @media screen and (max-width: 768px) {
+                body {
+                    padding: 10px;
+                }
+                
+                img:hover {
+                    transform: none; /* Disable hover effect on mobile */
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>A meme a day keeps the doctor away</h1>
+            <p>Here is a meme for you</p>
+            <p><img src="{{meme_pic}}" alt="Random Meme"></p>
+            <p>Meme: {{meme_name}}</p>
+            <p>Refresh the page for a new meme</p>
+        </div>
+        <footer style="background-color: transparent; color: rgba(243, 237, 237, 0.96); text-align: right; padding: 20px; position: fixed; bottom: 0; width: 100%; right: 20px;">
+            <p>&copy; 2025 created by sharmaakshat2222@gmail.com</p>
+        </footer>
+    </body>
+</html>
